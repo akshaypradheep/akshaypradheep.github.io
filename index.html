@@ -4,73 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshay Pradeep - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* General Reset */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background: #f4f4f4;
             color: #333;
         }
 
+        /* Container */
         .container {
             max-width: 900px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
-        h1, h2, h3 {
-            color: #0056b3;
+        /* Header */
+        h1 {
+            text-align: center;
+            font-size: 2.8em;
+            color: #3f51b5;
             margin-bottom: 10px;
         }
 
-        h1 {
-            font-size: 2.5em;
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
+        .contact-info a {
+            color: #3f51b5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            color: #ff5722;
+        }
+
+        /* Section Headers */
         h2 {
             font-size: 1.8em;
-            border-bottom: 2px solid #0056b3;
+            color: #3f51b5;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #3f51b5;
             padding-bottom: 5px;
-            margin-top: 20px;
         }
 
         h3 {
             font-size: 1.4em;
+            color: #333;
+            margin-bottom: 10px;
         }
 
-        .contact-info p {
-            margin: 5px 0;
+        /* Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px 20px;
         }
 
-        ul {
+        .section-card ul {
             margin: 10px 0;
             padding-left: 20px;
         }
 
-        ul li {
-            margin-bottom: 5px;
+        .section-card ul li {
+            margin-bottom: 8px;
         }
 
+        /* Skills Section */
+        .skills-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .skills-list li {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .skills-list li:hover {
+            background: #bbdefb;
+            transform: scale(1.05);
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            margin-top: 20px;
-            padding-top: 10px;
-            border-top: 1px solid #ddd;
+            margin-top: 40px;
+            padding: 15px;
+            background: #3f51b5;
+            color: #fff;
+            border-radius: 0 0 12px 12px;
+        }
+
+        footer p {
+            margin: 0;
             font-size: 0.9em;
         }
 
-        a {
-            color: #0056b3;
+        footer a {
+            color: #ffccbc;
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        footer a:hover {
+            color: #fff;
         }
     </style>
 </head>
@@ -79,18 +136,21 @@
         <h1>Akshay Pradeep</h1>
         <div class="contact-info">
             <p>📧 <a href="mailto:akshay.p.pradheep@gmail.com">akshay.p.pradheep@gmail.com</a></p>
-            <p>📞 +91 9074761070</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/akshaypradheep" target="_blank">https://linkedin.com/in/akshaypradheep</a></p>
-            <p>GitHub: <a href="https://github.com/akshaypradheep" target="_blank">https://github.com/akshaypradheep</a></p>
+            <p>📞 <a href="tel:+919074761070">+91 9074761070</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/akshaypradheep" target="_blank">linkedin.com/in/akshaypradheep</a></p>
+            <p>GitHub: <a href="https://github.com/akshaypradheep" target="_blank">github.com/akshaypradheep</a></p>
         </div>
+        
 
         <h2>Profile</h2>
-        <p>Engineer with over <strong>5.6 years</strong> of hands-on experience in <strong>Linux systems</strong>, <strong>Network protocols</strong>, <strong>Automation</strong>, troubleshooting, and system debugging. Known for innovative problem-solving, ensuring seamless operations, and optimizing system performance. Skilled in delivering high-quality technical support and efficient system operations in fast-paced environments.</p>
+        <div class="section-card">
+            <p>Engineer with over <strong>5.6 years</strong> of hands-on experience in <strong>Linux systems</strong>, <strong>Network protocols</strong>, <strong>Automation</strong>, troubleshooting, and system debugging. Known for innovative problem-solving, ensuring seamless operations, and optimizing system performance. Skilled in delivering high-quality technical support and efficient system operations in fast-paced environments.</p>
+        </div>
 
         <h2>Experience</h2>
-        <div>
+        <div class="section-card">
             <h3>Support Engineer - III L4</h3>
-            <p><strong>Amazon</strong> | <em>Dec 2023 - Present</em></p>
+            <p><strong>Amazon</strong> | <em>Dec 2023 - <strong>Present</strong></em></p>
             <ul>
                 <li>Integral part of the <strong>Manage Your Returns</strong> team, focused on ensuring reliability and efficiency in the returns management system.</li>
                 <li>Manage end-to-end <strong>pipeline processes</strong> and <strong>service uptime</strong>, optimizing system reliability and minimizing downtimes.</li>
@@ -100,7 +160,7 @@
                 <li>Continuously engage in process optimization initiatives to reduce manual interventions and enhance system performance.</li>
             </ul>
         </div>
-        <div>
+        <div class="section-card">
             <h3>Senior Operations Engineer</h3>
             <p><strong>6D Technologies</strong> | <em>Feb 2023 - Dec 2023</em></p>
             <ul>
@@ -112,7 +172,7 @@
                 <li>Trained junior team members on critical troubleshooting techniques, enhancing overall team efficiency.</li>
             </ul>
         </div>
-        <div>
+        <div class="section-card">
             <h3>Engineer Support L2</h3>
             <p><strong>Pelatro</strong> | <em>Mar 2021 - Mar 2023</em></p>
             <ul>
@@ -124,7 +184,7 @@
                 <li>Coordinated the integration of new modules, conducting <strong>thorough testing</strong> to validate functionality and system compatibility.</li>
             </ul>
         </div>
-        <div>
+        <div class="section-card">
             <h3>Engineer - Technical Support</h3>
             <p><strong>Tayana Software Solutions</strong> | <em>May 2019 - Mar 2021</em></p>
             <ul>
@@ -137,37 +197,25 @@
             </ul>
         </div>
 
-        <h2>Skills</h2>     
 
-        <h3>Core Competencies</h3>
-        <ul>
-            <li><strong>Technical Support & Troubleshooting</strong></li>
-            <li><strong>Production Support</strong></li>
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <li><strong>Linux Systems</strong></li>
+            <li><strong>Python & Shell Scripting</strong></li>
             <li><strong>System Monitoring</strong></li>
-            <li><strong>Application Maintenance</strong></li>
-            <li><strong>SLA Management</strong></li>
-        </ul>       
-
-        <h3>Technical Skills</h3>
-        <ul>
-            <li><strong>Languages & Scripting:</strong> Shell, Python, AWK</li>
-            <li><strong>Operating Systems:</strong> Linux (RHEL, CentOS, Ubuntu, Fedora, Kali, Raspbian)</li>
-            <li><strong>Cloud & Virtualization:</strong> AWS, VMware (ESXi, Player), Proxmox VE, Oracle Virtual Box</li>
-            <li><strong>Networking:</strong> TCP/IP, UDP, DNS</li>
-            <li><strong>APIs & Protocols:</strong> HTTP, REST, SOAP, Diameter, RADIUS, SMPP, MQTT</li>
-            <li><strong>Database:</strong> Oracle DB, PostgreSQL, MySQL</li>
-            <li><strong>Monitoring & Security:</strong> Nagios, Monit, ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, OWASP</li>
-            <li><strong>DevOps Tools:</strong> Docker, Kubernetes, Ansible, Git</li>
-            <li><strong>Additional Tools:</strong> Wireshark, Apache, Nginx, Postman, Portainer, Jira, Confluence, Notion, Markdown, Raspberry Pi</li>
-        </ul>
-
+            <li><strong>DevOps Tools</strong></li>
+            <li><strong>Cloud Platforms</strong></li>
+            <li><strong>Networking Protocols</strong></li>
+        </div>
 
         <h2>Personal Details</h2>
-        <ul>
-            <li><strong>Total Experience:</strong> 5.6 years</li>
-            <li><strong>Current Location:</strong> Hyderabad</li>
-            <li><strong>Languages Known:</strong> English, Malayalam, Hindi, Tamil</li>
-        </ul>
+        <div class="section-card">
+            <ul>
+                <li><strong>Total Experience:</strong> 5.6 years</li>
+                <li><strong>Current Location:</strong> Hyderabad</li>
+                <li><strong>Languages Known:</strong> English, Malayalam, Hindi, Tamil</li>
+            </ul>
+        </div>
 
         <footer>
             <p>© 2024 Akshay Pradeep. All rights reserved.</p>
