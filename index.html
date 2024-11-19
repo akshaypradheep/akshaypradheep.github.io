@@ -1,225 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshay Pradeep - CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* General Reset */
+        /* General Styles */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background-color: #fafafa;
             color: #333;
         }
 
-        /* Container */
         .container {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 20px auto;
             padding: 20px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Header */
         h1 {
             text-align: center;
-            font-size: 2.8em;
-            color: #3f51b5;
+            font-size: 2.5em;
+            color: #007bff;
             margin-bottom: 10px;
         }
 
+        /* Contact Info */
         .contact-info {
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             margin-bottom: 20px;
         }
 
         .contact-info a {
-            color: #3f51b5;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             text-decoration: none;
-            font-weight: 600;
+            color: #333;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a i {
+            font-size: 1.2em;
+            color: #007bff;
         }
 
         .contact-info a:hover {
-            color: #ff5722;
+            color: #007bff;
         }
 
-        /* Section Headers */
-        h2 {
+        /* Sections */
+        .section {
+            margin-top: 20px;
+        }
+
+        .section h2 {
             font-size: 1.8em;
-            color: #3f51b5;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #3f51b5;
+            margin-bottom: 10px;
+            color: #007bff;
+            border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
         }
 
-        h3 {
-            font-size: 1.4em;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        /* Cards */
-        .section-card {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        .experience {
             margin-bottom: 20px;
-            padding: 15px 20px;
         }
 
-        .section-card ul {
-            margin: 10px 0;
+        .experience h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .experience p {
+            font-size: 0.9em;
+        }
+
+        .experience ul {
+            list-style: none;
             padding-left: 20px;
         }
 
-        .section-card ul li {
-            margin-bottom: 8px;
+        .experience ul li {
+            margin-bottom: 5px;
+            line-height: 1.5;
         }
 
-        /* Skills Section */
-        .skills-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+        .experience li:before {
+            content: "•";
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        /* Skills and Personal Details */
+        .skills, .personal-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skills li, .personal-details li {
+            display: flex;
+            align-items: center;
             gap: 10px;
-            margin: 10px 0;
-            padding: 0;
-            list-style-type: none;
-        }
-
-        .skills-list li {
-            background: #e3f2fd;
-            padding: 10px;
+            background-color: #f9f9f9;
+            padding: 10px 15px;
             border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(50% - 20px);
+            font-size: 1em;
         }
 
-        .skills-list li:hover {
-            background: #bbdefb;
-            transform: scale(1.05);
-            transition: all 0.2s ease-in-out;
+        .skills li i, .personal-details li i {
+            font-size: 1.2em;
+            color: #007bff;
+        }
+
+        .skills li:hover, .personal-details li:hover {
+            background-color: #eaf5ff;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 15px;
-            background: #3f51b5;
-            color: #fff;
-            border-radius: 0 0 12px 12px;
-        }
-
-        footer p {
-            margin: 0;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
             font-size: 0.9em;
-        }
-
-        footer a {
-            color: #ffccbc;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #fff;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Akshay Pradeep</h1>
         <div class="contact-info">
-            <p>📧 <a href="mailto:akshay.p.pradheep@gmail.com">akshay.p.pradheep@gmail.com</a></p>
-            <p>📞 <a href="tel:+919074761070">+91 9074761070</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/akshaypradheep" target="_blank">linkedin.com/in/akshaypradheep</a></p>
-            <p>GitHub: <a href="https://github.com/akshaypradheep" target="_blank">github.com/akshaypradheep</a></p>
-        </div>
-        
-
-        <h2>Profile</h2>
-        <div class="section-card">
-            <p>Engineer with over <strong>5.6 years</strong> of hands-on experience in <strong>Linux systems</strong>, <strong>Network protocols</strong>, <strong>Automation</strong>, troubleshooting, and system debugging. Known for innovative problem-solving, ensuring seamless operations, and optimizing system performance. Skilled in delivering high-quality technical support and efficient system operations in fast-paced environments.</p>
-        </div>
-
-        <h2>Experience</h2>
-        <div class="section-card">
-            <h3>Support Engineer - III L4</h3>
-            <p><strong>Amazon</strong> | <em>Dec 2023 - <strong>Present</strong></em></p>
-            <ul>
-                <li>Integral part of the <strong>Manage Your Returns</strong> team, focused on ensuring reliability and efficiency in the returns management system.</li>
-                <li>Manage end-to-end <strong>pipeline processes</strong> and <strong>service uptime</strong>, optimizing system reliability and minimizing downtimes.</li>
-                <li>Identify and resolve <strong>software assurance</strong> and <strong>policy engine</strong> risks, implementing code fixes to address complex issues.</li>
-                <li>Collaborate closely with cross-functional teams to implement <strong>enhancements</strong> and resolve production issues efficiently.</li>
-                <li>Developed <strong>automated monitoring and alerting mechanisms</strong> to proactively address issues, improving response times.</li>
-                <li>Continuously engage in process optimization initiatives to reduce manual interventions and enhance system performance.</li>
-            </ul>
-        </div>
-        <div class="section-card">
-            <h3>Senior Operations Engineer</h3>
-            <p><strong>6D Technologies</strong> | <em>Feb 2023 - Dec 2023</em></p>
-            <ul>
-                <li>Managed critical <strong>Billing and number management systems</strong>, focusing on stability, accuracy, and operational efficiency.</li>
-                <li>Acted as a <strong>Level 3 escalation point</strong>, rapidly diagnosing and troubleshooting network and application-level issues.</li>
-                <li>Developed and deployed <strong>ELK Stack (Elasticsearch, Logstash, Kibana)</strong> to centralize monitoring, reducing incident response.</li>
-                <li>Automated reporting workflows for server and application metrics, enabling real-time data visualization and historical analysis.</li>
-                <li>Scaled systems to handle growing demand, deploying optimized workflows and conducting <strong>load testing</strong> to ensure readiness.</li>
-                <li>Trained junior team members on critical troubleshooting techniques, enhancing overall team efficiency.</li>
-            </ul>
-        </div>
-        <div class="section-card">
-            <h3>Engineer Support L2</h3>
-            <p><strong>Pelatro</strong> | <em>Mar 2021 - Mar 2023</em></p>
-            <ul>
-                <li>Specialized in supporting the <strong>mViva campaign management platform</strong>, delivering customer support while maintaining strict SLAs.</li>
-                <li>Researched, diagnosed, and resolved <strong>customer issues</strong> using extensive scripting knowledge in <strong>Shell</strong> and <strong>Python</strong>.</li>
-                <li>Implemented <strong>Nagios</strong> and <strong>Monit</strong> for system health monitoring, improving uptime and ensuring service reliability.</li>
-                <li>Created and optimized SQL queries and <strong>AWK scripts</strong> to verify and correct financial reports, preventing potential revenue leakage.</li>
-                <li>Actively involved in requirement gathering and impact analysis for <strong>new change requests (CRs)</strong>, ensuring accurate implementation and minimal downtime.</li>
-                <li>Coordinated the integration of new modules, conducting <strong>thorough testing</strong> to validate functionality and system compatibility.</li>
-            </ul>
-        </div>
-        <div class="section-card">
-            <h3>Engineer - Technical Support</h3>
-            <p><strong>Tayana Software Solutions</strong> | <em>May 2019 - Mar 2021</em></p>
-            <ul>
-                <li>Provided technical support for clients in the <strong>telecom and banking sectors</strong>, ensuring system stability and data integrity.</li>
-                <li>Conducted <strong>server maintenance</strong> and process automation, significantly reducing manual effort through scripting and task scheduling.</li>
-                <li>Performed in-depth <strong>log analysis</strong> and <strong>network diagnostics</strong>, resolving complex issues across protocols like Diameter, RADIUS, SIP, SMPP, and HTTP.</li>
-                <li>Utilized tools such as the <strong>Multi-protocol Testing Suite (MTS)</strong>, <strong>Wireshark</strong>, and <strong>Postman</strong> to troubleshoot and optimize network operations.</li>
-                <li>Led <strong>security testing initiatives</strong> following <strong>OWASP methodologies</strong> to safeguard sensitive data, ensuring industry-standard compliance.</li>
-                <li>Conducted comprehensive testing and validation on critical platforms, including <strong>PCRF</strong>, <strong>SMSC</strong>, <strong>IN</strong>, and <strong>ELOAD</strong>, enhancing performance and reliability.</li>
-            </ul>
+            <a href="mailto:akshay.p.pradheep@gmail.com">
+                <i class="fa-solid fa-envelope"></i> akshay.p.pradheep@gmail.com
+            </a>
+            <a href="tel:+919074761070">
+                <i class="fa-solid fa-phone"></i> +91 9074761070
+            </a>
+            <a href="https://linkedin.com/in/akshaypradheep" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/akshaypradheep" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
         </div>
 
+        <section class="section">
+            <h2>Profile</h2>
+            <p>Engineer with over <strong>5.6 years</strong> of hands-on experience in <strong>Linux systems</strong>, <strong>Network protocols</strong>, <strong>Automation</strong>, troubleshooting, and system debugging. Known for innovative problem-solving,
+                ensuring seamless operations, and optimizing system performance. Skilled in delivering high-quality technical support and efficient system operations in fast-paced environments.</p>
+        </section>
 
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <li><strong>Linux Systems</strong></li>
-            <li><strong>Python & Shell Scripting</strong></li>
-            <li><strong>System Monitoring</strong></li>
-            <li><strong>DevOps Tools</strong></li>
-            <li><strong>Cloud Platforms</strong></li>
-            <li><strong>Networking Protocols</strong></li>
-        </div>
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="experience">
+                <h3>Support Engineer - III L4</h3>
+                <p><strong>Amazon</strong> | <em>Dec 2023 - Present</em></p>
+                <ul>
+                    <li>Integral part of the <strong>Manage Your Returns</strong> team, focused on ensuring reliability and efficiency in the returns management system.</li>
+                    <li>Manage end-to-end <strong>pipeline processes</strong> and <strong>service uptime</strong>, optimizing system reliability and minimizing downtimes.</li>
+                    <li>Identify and resolve <strong>software assurance</strong> and <strong>policy engine</strong> risks, implementing code fixes to address complex issues.</li>
+                    <li>Collaborate closely with cross-functional teams to implement <strong>enhancements</strong> and resolve production issues efficiently.</li>
+                    <li>Developed <strong>automated monitoring and alerting mechanisms</strong> to proactively address issues, improving response times.</li>
+                    <li>Continuously engage in process optimization initiatives to reduce manual interventions and enhance system performance.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Senior Operations Engineer</h3>
+                <p><strong>6D Technologies</strong> | <em>Feb 2023 - Dec 2023</em></p>
+                <ul>
+                    <li>Managed critical <strong>Billing and number management systems</strong>, focusing on stability, accuracy, and operational efficiency.</li>
+                    <li>Acted as a <strong>Level 3 escalation point</strong>, rapidly diagnosing and troubleshooting network and application-level issues.</li>
+                    <li>Developed and deployed <strong>ELK Stack (Elasticsearch, Logstash, Kibana)</strong> to centralize monitoring, reducing incident response.</li>
+                    <li>Automated reporting workflows for server and application metrics, enabling real-time data visualization and historical analysis.</li>
+                    <li>Scaled systems to handle growing demand, deploying optimized workflows and conducting <strong>load testing</strong> to ensure readiness.</li>
+                    <li>Trained junior team members on critical troubleshooting techniques, enhancing overall team efficiency.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Engineer Support L2</h3>
+                <p><strong>Pelatro</strong> | <em>Mar 2021 - Mar 2023</em></p>
+                <ul>
+                    <li>Specialized in supporting the <strong>mViva campaign management platform</strong>, delivering customer support while maintaining strict SLAs.</li>
+                    <li>Researched, diagnosed, and resolved <strong>customer issues</strong> using extensive scripting knowledge in <strong>Shell</strong> and <strong>Python</strong>.</li>
+                    <li>Implemented <strong>Nagios</strong> and <strong>Monit</strong> for system health monitoring, improving uptime and ensuring service reliability.</li>
+                    <li>Created and optimized SQL queries and <strong>AWK scripts</strong> to verify and correct financial reports, preventing potential revenue leakage.</li>
+                    <li>Actively involved in requirement gathering and impact analysis for <strong>new change requests (CRs)</strong>, ensuring accurate implementation and minimal downtime.</li>
+                    <li>Coordinated the integration of new modules, conducting <strong>thorough testing</strong> to validate functionality and system compatibility.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Engineer - Technical Support</h3>
+                <p><strong>Tayana Software Solutions</strong> | <em>May 2019 - Mar 2021</em></p>
+                <ul>
+                    <li>Provided technical support for clients in the <strong>telecom and banking sectors</strong>, ensuring system stability and data integrity.</li>
+                    <li>Conducted <strong>server maintenance</strong> and process automation, significantly reducing manual effort through scripting and task scheduling.</li>
+                    <li>Performed in-depth <strong>log analysis</strong> and <strong>network diagnostics</strong>, resolving complex issues across protocols like Diameter, RADIUS, SIP, SMPP, and HTTP.</li>
+                    <li>Utilized tools such as the <strong>Multi-protocol Testing Suite (MTS)</strong>, <strong>Wireshark</strong>, and <strong>Postman</strong> to troubleshoot and optimize network operations.</li>
+                    <li>Led <strong>security testing initiatives</strong> following <strong>OWASP methodologies</strong> to safeguard sensitive data, ensuring industry-standard compliance.</li>
+                    <li>Conducted comprehensive testing and validation on critical platforms, including <strong>PCRF</strong>, <strong>SMSC</strong>, <strong>IN</strong>, and <strong>ELOAD</strong>, enhancing performance and reliability.</li>
+                </ul>
+            </div>
 
-        <h2>Personal Details</h2>
-        <div class="section-card">
-            <ul>
-                <li><strong>Total Experience:</strong> 5.6 years</li>
-                <li><strong>Current Location:</strong> Hyderabad</li>
-                <li><strong>Languages Known:</strong> English, Malayalam, Hindi, Tamil</li>
-            </ul>
-        </div>
 
-        <footer>
-            <p>© 2024 Akshay Pradeep. All rights reserved.</p>
-        </footer>
+
+            <section class="section">
+                <h2>Skills</h2>
+                <ul class="skills">
+                    <li><i class="fa-solid fa-tools"></i>Technical Support & Troubleshooting</li>
+                    <li><i class="fa-solid fa-cogs"></i>Production Support</li>
+                    <li><i class="fa-solid fa-server"></i>System Monitoring</li>
+                    <li><i class="fa-solid fa-code"></i>Application Maintenance</li>
+                    <li><i class="fa-solid fa-chart-line"></i>SLA Management</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Technical Skills</h2>
+                <ul class="skills">
+                    <li><i class="fa-brands fa-linux"></i>Linux (RHEL, CentOS, Ubuntu, Fedora, Kali, Raspbian)</li>
+                    <li><i class="fa-solid fa-terminal"></i>Shell, Python, AWK Scripting</li>
+                    <li><i class="fa-solid fa-cloud"></i>Cloud Platforms (AWS)</li>
+                    <li><i class="fa-solid fa-network-wired"></i>Networking (TCP/IP, UDP, DNS)</li>
+                    <li><i class="fa-solid fa-plug"></i>APIs & Protocols (HTTP, REST, SOAP, Diameter, RADIUS, SMPP, MQTT)</li>
+                    <li><i class="fa-solid fa-database"></i>Database (Oracle DB, PostgreSQL, MySQL)</li>
+                    <li><i class="fa-solid fa-shield-alt"></i>Monitoring & Security (Nagios, Monit, ELK Stack, Prometheus, Grafana,OWASP)</li>
+                    <li><i class="fa-solid fa-docker"></i>DevOps Tools (Docker, Kubernetes, Ansible, Git)</li>
+                    <li><i class="fa-solid fa-code-branch"></i>Additional Tools (Wireshark, Apache, Nginx, Postman, Portainer, Jira, Confluence, Notion, Markdown)</li>
+                    <li><i class="fa-solid fa-microchip"></i>Hardware (Raspberry Pi,Arduino,NodeMCU)</li>
+                </ul>
+            </section>
+
+
+            <section class="section">
+                <h2>Personal Details</h2>
+                <ul class="personal-details">
+                    <li><i class="fa-solid fa-clock"></i>Total Experience: 5.6 years</li>
+                    <li><i class="fa-solid fa-location-dot"></i>Current Location: Hyderabad</li>
+                    <li><i class="fa-solid fa-language"></i>Languages Known: English, Malayalam, Hindi, Tamil</li>
+                </ul>
+            </section>
+
+            <footer>
+                <p>© 2024 Akshay Pradeep. All rights reserved.</p>
+            </footer>
     </div>
 </body>
+
 </html>
