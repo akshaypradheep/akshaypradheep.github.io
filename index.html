@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,30 +75,42 @@
             padding-bottom: 5px;
         }
 
-        .experience {
+        /* Experience */
+        .experience-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            transition: box-shadow 0.2s, transform 0.2s;
         }
 
-        .experience h3 {
-            font-size: 1.5em;
-            margin-bottom: 5px;
+        .experience-card:hover {
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
         }
 
-        .experience p {
+        .experience-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+
+        .experience-card p {
             font-size: 0.9em;
+            margin-bottom: 10px;
         }
 
-        .experience ul {
+        .experience-card ul {
             list-style: none;
             padding-left: 20px;
         }
 
-        .experience ul li {
+        .experience-card ul li {
             margin-bottom: 5px;
             line-height: 1.5;
         }
 
-        .experience li:before {
+        .experience-card li:before {
             content: "•";
             margin-right: 10px;
             color: #007bff;
@@ -144,7 +157,7 @@
 
 <body>
     <div class="container">
-        <h1>Akshay Pradeep</h1>
+        <h1>AKSHAY PRADEEP</h1>
         <div class="contact-info">
             <a href="mailto:akshay.p.pradheep@gmail.com">
                 <i class="fa-solid fa-envelope"></i> akshay.p.pradheep@gmail.com
@@ -162,13 +175,15 @@
 
         <section class="section">
             <h2>Profile</h2>
-            <p>Engineer with over <strong>5.6 years</strong> of hands-on experience in <strong>Linux systems</strong>, <strong>Network protocols</strong>, <strong>Automation</strong>, troubleshooting, and system debugging. Known for innovative problem-solving,
+            <div class="experience-card">
+            <p>Engineer with over <strong>5.6 years</strong> of hands-on experience in <strong>Linux systems</strong>, <strong>Network protocols</strong>, <strong>Automation</strong>, <strong>Troubleshooting</strong>, and system debugging. Known for innovative problem-solving,
                 ensuring seamless operations, and optimizing system performance. Skilled in delivering high-quality technical support and efficient system operations in fast-paced environments.</p>
-        </section>
+            </div>
+            </section>
 
         <section class="section">
             <h2>Experience</h2>
-            <div class="experience">
+            <div class="experience-card">
                 <h3>Support Engineer - III L4</h3>
                 <p><strong>Amazon</strong> | <em>Dec 2023 - Present</em></p>
                 <ul>
@@ -180,7 +195,7 @@
                     <li>Continuously engage in process optimization initiatives to reduce manual interventions and enhance system performance.</li>
                 </ul>
             </div>
-            <div class="experience">
+            <div class="experience-card">
                 <h3>Senior Operations Engineer</h3>
                 <p><strong>6D Technologies</strong> | <em>Feb 2023 - Dec 2023</em></p>
                 <ul>
@@ -192,7 +207,7 @@
                     <li>Trained junior team members on critical troubleshooting techniques, enhancing overall team efficiency.</li>
                 </ul>
             </div>
-            <div class="experience">
+            <div class="experience-card">
                 <h3>Engineer Support L2</h3>
                 <p><strong>Pelatro</strong> | <em>Mar 2021 - Mar 2023</em></p>
                 <ul>
@@ -204,7 +219,7 @@
                     <li>Coordinated the integration of new modules, conducting <strong>thorough testing</strong> to validate functionality and system compatibility.</li>
                 </ul>
             </div>
-            <div class="experience">
+            <div class="experience-card">
                 <h3>Engineer - Technical Support</h3>
                 <p><strong>Tayana Software Solutions</strong> | <em>May 2019 - Mar 2021</em></p>
                 <ul>
